@@ -1,0 +1,9 @@
+name: nlp
+version: 0.1.0
+
+authors:
+  - Richard Delaplace <rdelaplace@yueyehua.net>
+
+crystal: 0.27.0
+
+license: MIT
