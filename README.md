@@ -1,4 +1,8 @@
 # nlp
+[![Build Status][travis-img]][travis-url]
+[![License][license-img]][license-url]
+[![Docs][docs-img]][docs-url]
+[![Coverage][coverage-img]][coverage-url]
 
 This project is a compilation of tools and algorithms for NLP using
 Crystal-lang.
@@ -34,3 +38,12 @@ WIP: Just started lately
 ## Contributors
 
 - [Richard Delaplace](https://github.com/Yueyehua) - creator and maintainer
+
+[travis-img]: https://travis-ci.org/Yueyehua/nlp.svg?branch=master
+[travis-url]: https://travis-ci.org/Yueyehua/nlp
+[license-img]: https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg
+[license-url]: LICENSE
+[docs-img]: https://img.shields.io/readthedocs/nlp.svg
+[docs-url]: https://yueyehua.github.io/nlp/
+[coverage-img]: https://img.shields.io/coveralls/github/Yueyehua/nlp/master.svg
+[coverage-url]: https://Yueyehua.github.io/nlp/coverage/
