@@ -41,7 +41,7 @@ WIP: Just started lately
 
 [travis-img]: https://travis-ci.org/Yueyehua/nlp.svg?branch=master
 [travis-url]: https://travis-ci.org/Yueyehua/nlp
-[license-img]: https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg
+[license-img]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
 [docs-img]: https://img.shields.io/readthedocs/nlp.svg
 [docs-url]: https://yueyehua.github.io/nlp/
