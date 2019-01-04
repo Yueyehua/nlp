@@ -7,12 +7,11 @@ module NLP
     end
 
     def initialize(@title : String, @item : String, lang : String | Symbol)
-      @lang = NLP::Language.search(lang.to_s)
+      @lang = NLP::Language.search(lang)
     end
 
-    def detect_language
-      # TODO: Put your code here
-      # succeed or raise an error
+    def detect_language : NLP::Language | Nil
+      @lang = NLP::Parser::LanguageRecognitionParser.parse(@item)
     end
 
     def lemmatize
