@@ -1,12 +1,12 @@
 module NLP
   class Text < Entity(String)
     property lang : NLP::Language | Nil
-    property title : String
+    property title : String | Nil
 
-    def initialize(@title : String, @item : String, @lang = nil)
+    def initialize(@item, @lang : NLP::Language | Nil = nil, @title = nil)
     end
 
-    def initialize(@title : String, @item : String, lang : String | Symbol)
+    def initialize(@item, lang : String | Symbol, @title = nil)
       @lang = NLP::Language.search(lang)
     end
 

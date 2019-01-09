@@ -114,7 +114,7 @@ module NLP
       end
 
       def is_japanese?(str : String) : Bool
-        find_regex(str, /\p{Hiragana}|\p{Katakana}|[\x{3000}-\x{303F}]/)
+        find_regex(str, /\p{Hiragana}|\p{Katakana}/)
       end
 
       def is_latin?(str : String) : Bool
