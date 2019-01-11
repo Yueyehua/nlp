@@ -14,6 +14,15 @@ module NLP
       @lang = NLP::Parser::LanguageRecognitionParser.parse(@item)
     end
 
+    def frequency_map : Hash(String, Int32)
+      h = Hash(String, Int32).new
+      tokenize.each do |e|
+        h[e] = 0 unless h.has_key?(e)
+        h[e] += 1
+      end
+      h
+    end
+
     def lemmatize
       # TODO: Put your code here
     end
@@ -24,7 +33,7 @@ module NLP
 
     def tokenize
       detect_language
-      # run tokenize depending on language
+      @item.split(/[\s\p{Z}\p{P}]+/) # TODO run tokenize depending on language
     end
   end
 end

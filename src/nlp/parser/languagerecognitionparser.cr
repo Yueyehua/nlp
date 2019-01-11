@@ -211,18 +211,18 @@ module NLP
         when is_greek?(str)      then NLP::Language::Greek
         when is_armenian?(str)   then NLP::Language::Armenian
         when is_georgian?(str)   then NLP::Language::Georgian
-        when is_ukrainian?(str)  then NLP::Language::Ukrainian
+        when is_ukrainian?(str)  then NLP::Language::Ukrainian # TODO cyrillic
         when is_serbian?(str)    then NLP::Language::Serbian
         when is_macedonian?(str) then NLP::Language::Macedonian
         when is_belarusian?(str) then NLP::Language::Belarusian
         when is_bulgarian?(str)  then NLP::Language::Bulgarian
-        when is_russian?(str)    then NLP::Language::Russian
-        when is_urdu?(str)       then NLP::Language::Urdu
+        when is_russian?(str)    then NLP::Language::Russian # TODO cyrillic
+        when is_urdu?(str)       then NLP::Language::Urdu # TODO arabic
         when is_persian?(str)    then NLP::Language::Persian
-        when is_arabic?(str)     then NLP::Language::Arabic
+        when is_arabic?(str)     then NLP::Language::Arabic # TODO arabic
         when is_tamil?(str)      then NLP::Language::Tamil
         when is_guarani?(str)    then NLP::Language::Guarani
-        when is_spanish?(str)    then NLP::Language::Spanish
+        when is_spanish?(str)    then NLP::Language::Spanish # TODO latin
         when is_romanian?(str)   then NLP::Language::Romanian
         when is_french?(str)     then NLP::Language::French
         when is_italian?(str)    then NLP::Language::Italian
@@ -239,7 +239,7 @@ module NLP
         when is_norwegian?(str)  then NLP::Language::Norwegian
         when is_icelandic?(str)  then NLP::Language::Icelandic
         when is_faroese?(str)    then NLP::Language::Faroese
-        when is_latin?(str)      then NLP::Language::Latin
+        when is_latin?(str)      then NLP::Language::Latin # TODO latin
         end
       end
     end
