@@ -14,26 +14,32 @@ module NLP
       @lang = NLP::Parser::LanguageRecognitionParser.parse(@item)
     end
 
-    def frequency_map : Hash(String, Int32)
-      h = Hash(String, Int32).new
-      tokenize.each do |e|
-        h[e] = 0 unless h.has_key?(e)
-        h[e] += 1
-      end
-      h
-    end
-
     def lemmatize
       # TODO: Put your code here
+    end
+
+    def ngram(n : Int32) : Array(String)
+      a = Array(String).new
+      tokenize.each do |w|
+        a += NLP::Word.new(w).ngram(n)
+      end
+      a
+    end
+
+    def ngram_frequency(n : Int32) : Hash(String, Int32)
+      NLP::Parser::Frequency.count(ngram(n))
     end
 
     def stem
       # TODO: Put your code here
     end
 
-    def tokenize
-      detect_language
-      @item.split(/[\s\p{Z}\p{P}]+/) # TODO run tokenize depending on language
+    def tokenize : Array(String)
+      NLP::Parser::Tokenizer.tokenize(@item, @lang)
+    end
+
+    def word_frequency : Hash(String, Int32)
+      NLP::Parser::Frequency.count(tokenize)
     end
   end
 end

@@ -16,7 +16,7 @@ describe NLP::Parser::LanguageRecognitionParser do
       str = File.read(File.join(NLP_DIR, "spec", "samples", "#{lang}.txt"))
       l = NLP::Parser::LanguageRecognitionParser.parse(str)
       l.should be_a NLP::Language
-      # l.to_s.should be lang.to_s # TODO
+      l.to_s.should be lang.to_s # TODO: Fix macedonian
     end
   end
 end
