@@ -35,7 +35,9 @@ module NLP
     end
 
     def tokenize : Array(String)
-      NLP::Parser::Tokenizer.tokenize(@item, @lang)
+      a = NLP::Parser::Tokenizer.tokenize(@item, @lang)
+      a.delete("")
+      a
     end
 
     def word_frequency : Hash(String, Int32)

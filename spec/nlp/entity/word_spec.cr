@@ -17,4 +17,10 @@ describe NLP::Word do
     e.item.should be "Word"
     e.lang.should be_a NLP::Language
   end
+  it "should split into ngrams." do
+    e = NLP::Word.new "Word", :English
+    n = e.ngram(2)
+    n.should be_a Array(String)
+    n.should eq ["Wo", "or", "rd"]
+  end
 end

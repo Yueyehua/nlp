@@ -6,7 +6,7 @@ module NLP
       def count(arr : Array(T)) forall T
         h = Hash(T, Int32).new
         arr.each do |e|
-          h[e] = 1 unless h.has_key?(e)
+          h[e] = 0 unless h.has_key?(e)
           h[e] += 1
         end
         h
