@@ -3,10 +3,6 @@ module NLP
     module LanguageRecognitionParser
       extend self
 
-      def calculate_similarity(str : String, reference : String)
-        NLP::StringMetric::Similarity.jaccard(str, reference)
-      end
-
       def find_regex(str : String, regexp : Regex) : Bool
         str.match(regexp) ? true : false
       end
